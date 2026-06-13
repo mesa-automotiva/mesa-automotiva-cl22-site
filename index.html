@@ -5,58 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Mesa Automotiva CL22: baixe o app oficial e acompanhe as redes sociais."
+      content="Mesa Automotiva CL22: simulador de mesa de som automotiva para Android."
     />
     <title>Mesa Automotiva CL22</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="site">
+    <main class="page">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="bg-motion" aria-hidden="true">
-          <span class="curve curve-one"></span>
-          <span class="curve curve-two"></span>
-          <span class="curve curve-three"></span>
-          <span class="pulse pulse-one"></span>
-          <span class="pulse pulse-two"></span>
-          <span class="pulse pulse-three"></span>
-        </div>
-
-        <header class="brand">
-          <span class="brand-mark">CL22</span>
+        <header class="brand-row">
+          <img
+            class="brand-logo"
+            src="assets/logo-profile.jpg"
+            alt="Logo Mesa Automotiva"
+          />
           <span>Mesa Automotiva</span>
         </header>
 
-        <div class="intro">
-          <p class="kicker">Som automotivo no controle</p>
-          <h1 id="hero-title">Controle seu som pelo app</h1>
-          <p>Baixe o app oficial e acompanhe a Mesa Automotiva nas redes.</p>
+        <div class="copy">
+          <p class="tag">App Android para som automotivo</p>
+          <h1 id="hero-title">Simulador de mesa no seu celular.</h1>
+          <p>
+            Um lugar para acessar mesas, controles e recursos feitos para quem
+            curte som automotivo.
+          </p>
         </div>
 
-        <div class="audio-display" aria-hidden="true">
-          <div class="speaker-main">
-            <span class="cone cone-a"></span>
-            <span class="cone cone-b"></span>
-            <span class="cone cone-c"></span>
-            <span class="cone-dot"></span>
-          </div>
-          <div class="speaker-mini mini-one"></div>
-          <div class="speaker-mini mini-two"></div>
-          <div class="meter">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <nav class="links" aria-label="Links principais">
+        <nav class="actions" aria-label="Links principais">
           <a
-            class="action action-download"
-            href="https://play.google.com/store/apps/details?id=com.mesaautomotiva.cl22"
+            class="button button-main"
+            href="https://play.google.com/store/apps/details?id=com.mesaautomotiva.cl23"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -65,40 +43,70 @@
             </svg>
             <span>
               <strong>Baixar APK</strong>
-              <small>App oficial CL22</small>
+              <small>Play Store</small>
             </span>
           </a>
 
-          <a
-            class="action"
-            href="https://www.tiktok.com/@mesaautomotiva"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M15.9 3c.4 2.5 1.8 4.1 4.1 4.4v3.6c-1.5.1-2.9-.4-4.1-1.2v5.9c0 3.1-2.4 5.3-5.6 5.3-3 0-5.3-2.1-5.3-5s2.2-5 5.1-5c.4 0 .8 0 1.1.1v3.7c-.3-.1-.6-.2-1-.2-1 0-1.8.6-1.8 1.5s.8 1.5 1.8 1.5c1.1 0 1.9-.7 1.9-1.9V3h3.8Z" />
-            </svg>
-            <span>
-              <strong>TikTok</strong>
-              <small>@mesaautomotiva</small>
-            </span>
-          </a>
+          <div class="social-row">
+            <a
+              class="button"
+              href="https://www.tiktok.com/@mesaautomotiva"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15.9 3c.4 2.5 1.8 4.1 4.1 4.4v3.6c-1.5.1-2.9-.4-4.1-1.2v5.9c0 3.1-2.4 5.3-5.6 5.3-3 0-5.3-2.1-5.3-5s2.2-5 5.1-5c.4 0 .8 0 1.1.1v3.7c-.3-.1-.6-.2-1-.2-1 0-1.8.6-1.8 1.5s.8 1.5 1.8 1.5c1.1 0 1.9-.7 1.9-1.9V3h3.8Z" />
+              </svg>
+              <span>TikTok</span>
+            </a>
 
-          <a
-            class="action"
-            href="https://www.instagram.com/mesa_automotiva?igsh=dzlzZTd3NW53b2U5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 3A2.8 2.8 0 0 0 5 7.8v8.4A2.8 2.8 0 0 0 7.8 19h8.4a2.8 2.8 0 0 0 2.8-2.8V7.8A2.8 2.8 0 0 0 16.2 5H7.8Zm4.2 2.9a4.1 4.1 0 1 1 0 8.2 4.1 4.1 0 0 1 0-8.2Zm0 2.9a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Zm4.6-3.1a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" />
-            </svg>
-            <span>
-              <strong>Instagram</strong>
-              <small>@mesa_automotiva</small>
-            </span>
-          </a>
+            <a
+              class="button"
+              href="https://www.instagram.com/mesa_automotiva?igsh=dzlzZTd3NW53b2U5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 3A2.8 2.8 0 0 0 5 7.8v8.4A2.8 2.8 0 0 0 7.8 19h8.4a2.8 2.8 0 0 0 2.8-2.8V7.8A2.8 2.8 0 0 0 16.2 5H7.8Zm4.2 2.9a4.1 4.1 0 1 1 0 8.2 4.1 4.1 0 0 1 0-8.2Zm0 2.9a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Zm4.6-3.1a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" />
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </div>
         </nav>
+
+        <div class="control-card" aria-label="Resumo visual do app">
+          <div class="card-head">
+            <span>CL22</span>
+          </div>
+
+          <div class="screen">
+            <span>MESAS</span>
+            <strong>Som Automotivo</strong>
+          </div>
+
+          <div class="feature-grid">
+            <div>
+              <span class="mini-led"></span>
+              <strong>Grave</strong>
+              <small>Controle dedicado</small>
+            </div>
+            <div>
+              <span class="mini-led blue"></span>
+              <strong>Medio</strong>
+              <small>Ajustes de mesa</small>
+            </div>
+            <div>
+              <span class="mini-led amber"></span>
+              <strong>Canais</strong>
+              <small>Organizado no app</small>
+            </div>
+            <div>
+              <span class="mini-led"></span>
+              <strong>Android</strong>
+              <small>Na Play Store</small>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>
