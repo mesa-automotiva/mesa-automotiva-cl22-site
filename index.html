@@ -5,109 +5,356 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Mesa Automotiva CL22: simulador de mesa de som automotiva para Android."
+      content="Mesa Automotiva CL22: simulador de mesa automotiva para Android, com mesas, player e efeitos visuais."
     />
+    <meta name="theme-color" content="#08090c" />
     <title>Mesa Automotiva CL22</title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="assets/mixer.jpg" />
+    <link rel="preload" as="image" href="assets/white-table.jpg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="page">
-      <section class="hero" aria-labelledby="hero-title">
-        <header class="brand-row">
-          <img
-            class="brand-logo"
-            src="assets/logo-profile.jpg"
-            alt="Logo Mesa Automotiva"
-          />
-          <span>Mesa Automotiva</span>
-        </header>
+    <div class="cursor-light" aria-hidden="true"></div>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand-lockup" href="#top" aria-label="Mesa Automotiva CL22">
+          <img src="assets/app-icon.jpg" alt="" />
+          <span>
+            <strong>Mesa Automotiva</strong>
+            <small>CL22</small>
+          </span>
+        </a>
 
-        <div class="copy">
-          <p class="tag">App Android para som automotivo</p>
-          <h1 id="hero-title">Simulador de mesa no seu celular.</h1>
-          <p>
-            Um lugar para acessar mesas, controles e recursos feitos para quem
-            curte som automotivo.
-          </p>
-        </div>
+        <nav class="top-links" aria-label="Links principais">
+          <a href="#mesas">Mesas</a>
+          <a href="#playstore">Play Store</a>
+          <a href="#avaliacoes">Avaliações</a>
+        </nav>
+      </header>
 
-        <nav class="actions" aria-label="Links principais">
-          <a
-            class="button button-main"
-            href="https://play.google.com/store/apps/details?id=com.mesaautomotiva.cl23"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M5 20.1V3.9c0-.7.8-1.2 1.4-.8l12.9 8.1c.6.4.6 1.2 0 1.6L6.4 20.9c-.6.4-1.4 0-1.4-.8Z" />
-            </svg>
-            <span>
-              <strong>Baixar APK</strong>
-              <small>Play Store</small>
-            </span>
-          </a>
+      <main id="top">
+        <section class="hero-section" aria-labelledby="hero-title">
+          <div class="hero-backdrop" aria-hidden="true">
+            <div class="scan-grid"></div>
+            <div class="wave wave-a"></div>
+            <div class="wave wave-b"></div>
+            <div class="pulse-lines"></div>
+          </div>
 
-          <div class="social-row">
+          <div class="hero-copy">
+            <p class="eyebrow">Simulador oficial para Android</p>
+            <h1 id="hero-title">
+              <span class="title-main">MESA<br />CL22</span>
+              <span class="title-sub">no controle do som<br />automotivo.</span>
+            </h1>
+            <p class="lead">
+              Mesas, player, equalizador e visual de painel em uma experiência
+              criada para quem gosta de som forte na palma da mão.
+            </p>
+
+            <dl class="hero-stats" aria-label="Dados do aplicativo">
+              <div>
+                <dt>4,7</dt>
+                <dd>nota média</dd>
+              </div>
+              <div>
+                <dt>10 mil+</dt>
+                <dd>downloads</dd>
+              </div>
+              <div>
+                <dt>5 estrelas</dt>
+                <dd>provas no final</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-stage">
+            <div class="stage-ring" aria-hidden="true"></div>
+            <article class="console-panel">
+              <div class="panel-top">
+                <span>CL22 MAIN BUS</span>
+                <span class="status-dot">AO VIVO</span>
+              </div>
+              <img src="assets/mixer.jpg" alt="Tela do mixer do app Mesa CL22" />
+              <div class="meter-row" aria-hidden="true">
+                <span style="--h: 74%"></span>
+                <span style="--h: 38%"></span>
+                <span style="--h: 92%"></span>
+                <span style="--h: 56%"></span>
+                <span style="--h: 84%"></span>
+                <span style="--h: 44%"></span>
+                <span style="--h: 68%"></span>
+              </div>
+            </article>
+
+            <figure class="phone-card phone-front">
+              <img src="assets/white-table.jpg" alt="Mesa branca do app CL22" />
+            </figure>
+            <figure class="phone-card phone-back">
+              <img src="assets/dark-table.jpg" alt="Mesa escura do app CL22" />
+            </figure>
+          </div>
+        </section>
+
+        <section class="ticker-band" aria-label="Destaques animados">
+          <div class="ticker-track">
+            <span>Mesa automotiva</span>
+            <span>Equalizador</span>
+            <span>Player</span>
+            <span>VU visual</span>
+            <span>Controle no Android</span>
+            <span>CL22</span>
+          </div>
+        </section>
+
+        <section class="motion-section" aria-label="Telas do app em movimento">
+          <div class="motion-sticky">
+            <div class="motion-visualizer" aria-hidden="true">
+              <span style="--d: 0"></span>
+              <span style="--d: 1"></span>
+              <span style="--d: 2"></span>
+              <span style="--d: 3"></span>
+              <span style="--d: 4"></span>
+              <span style="--d: 5"></span>
+              <span style="--d: 6"></span>
+              <span style="--d: 7"></span>
+            </div>
+
+            <div class="motion-focus" aria-hidden="true">
+              <img class="focus-mixer" src="assets/mixer.jpg" alt="" />
+              <img class="focus-table" src="assets/white-table.jpg" alt="" />
+            </div>
+
+            <div class="motion-lane lane-one" aria-hidden="true">
+              <div class="motion-track" data-scroll-speed="1">
+                <figure class="screen-card large">
+                  <img src="assets/mixer.jpg" alt="" />
+                  <span>Mixer completo</span>
+                </figure>
+                <figure class="screen-card tall">
+                  <img src="assets/white-table.jpg" alt="" />
+                  <span>Mesa branca</span>
+                </figure>
+                <figure class="screen-card tall dark-card">
+                  <img src="assets/dark-table.jpg" alt="" />
+                  <span>Mesa escura</span>
+                </figure>
+              </div>
+            </div>
+
+            <div class="motion-lane lane-two" aria-hidden="true">
+              <div class="motion-track reverse" data-scroll-speed="-0.72">
+                <figure class="screen-card tall dark-card">
+                  <img src="assets/dark-table.jpg" alt="" />
+                  <span>Mesa escura</span>
+                </figure>
+                <figure class="screen-card large">
+                  <img src="assets/mixer.jpg" alt="" />
+                  <span>Equalização</span>
+                </figure>
+                <figure class="screen-card tall">
+                  <img src="assets/white-table.jpg" alt="" />
+                  <span>CL22</span>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="motion-endcap" aria-hidden="true">
+            <img class="endcap-mixer" src="assets/mixer.jpg" alt="" />
+            <img class="endcap-table" src="assets/dark-table.jpg" alt="" />
+            <img class="endcap-white" src="assets/white-table.jpg" alt="" />
+          </div>
+        </section>
+
+        <section class="social-section" id="playstore" aria-labelledby="social-title">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Links integrados</p>
+            <h2 id="social-title">Baixe o app e siga nas redes.</h2>
+          </div>
+
+          <div class="social-grid">
             <a
-              class="button"
+              class="social-tile play"
+              href="https://play.google.com/store/apps/details?id=com.mesaautomotiva.cl23"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-reveal
+            >
+              <span class="tile-icon brand-play" aria-hidden="true">
+                <svg viewBox="0 0 48 48" focusable="false">
+                  <path class="play-blue" d="M8 5.5v37l18.2-18.5L8 5.5Z" />
+                  <path class="play-green" d="M9.8 4.6 36.4 19.7 26.2 24 9.8 4.6Z" />
+                  <path class="play-yellow" d="M9.8 43.4 26.2 24l10.2 4.3L9.8 43.4Z" />
+                  <path class="play-red" d="M26.2 24 36.4 19.7 42 23c1.4.8 1.4 2.2 0 3l-5.6 2.3L26.2 24Z" />
+                </svg>
+              </span>
+              <strong>Play Store</strong>
+              <small>Baixar o app</small>
+            </a>
+            <a
+              class="social-tile tik"
               href="https://www.tiktok.com/@mesaautomotiva"
               target="_blank"
               rel="noopener noreferrer"
+              data-reveal
             >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M15.9 3c.4 2.5 1.8 4.1 4.1 4.4v3.6c-1.5.1-2.9-.4-4.1-1.2v5.9c0 3.1-2.4 5.3-5.6 5.3-3 0-5.3-2.1-5.3-5s2.2-5 5.1-5c.4 0 .8 0 1.1.1v3.7c-.3-.1-.6-.2-1-.2-1 0-1.8.6-1.8 1.5s.8 1.5 1.8 1.5c1.1 0 1.9-.7 1.9-1.9V3h3.8Z" />
-              </svg>
-              <span>TikTok</span>
+              <span class="tile-icon brand-tiktok" aria-hidden="true">
+                <svg viewBox="0 0 48 48" focusable="false">
+                  <path class="tik-cyan" d="M31.2 5.8c.8 6.1 4.3 10.4 10.3 11.3v7.4c-3.8.1-7.1-.9-10.1-3v12.4c0 7.4-5.8 13.1-13.1 13.1C11 47 5.5 41.6 5.5 34.6c0-7.1 5.7-12.5 12.8-12.5.9 0 1.7.1 2.6.3v7.7c-.8-.3-1.5-.4-2.4-.4-2.8 0-5 2.1-5 4.9 0 2.9 2.2 5 5 5s5-2.1 5-5V5.8h7.7Z" />
+                  <path class="tik-red" d="M33.2 7.8c.8 6.1 4.3 10.4 10.3 11.3v7.4c-3.8.1-7.1-.9-10.1-3v12.4c0 7.4-5.8 13.1-13.1 13.1C13 49 7.5 43.6 7.5 36.6c0-7.1 5.7-12.5 12.8-12.5.9 0 1.7.1 2.6.3v7.7c-.8-.3-1.5-.4-2.4-.4-2.8 0-5 2.1-5 4.9 0 2.9 2.2 5 5 5s5-2.1 5-5V7.8h7.7Z" />
+                  <path class="tik-white" d="M32.1 6.8c.8 6.1 4.3 10.4 10.3 11.3v7.4c-3.8.1-7.1-.9-10.1-3v12.4c0 7.4-5.8 13.1-13.1 13.1C11.9 48 6.4 42.6 6.4 35.6c0-7.1 5.7-12.5 12.8-12.5.9 0 1.7.1 2.6.3v7.7c-.8-.3-1.5-.4-2.4-.4-2.8 0-5 2.1-5 4.9 0 2.9 2.2 5 5 5s5-2.1 5-5V6.8h7.7Z" />
+                </svg>
+              </span>
+              <strong>TikTok</strong>
+              <small>@mesaautomotiva</small>
             </a>
-
             <a
-              class="button"
+              class="social-tile insta"
               href="https://www.instagram.com/mesa_automotiva?igsh=dzlzZTd3NW53b2U5"
               target="_blank"
               rel="noopener noreferrer"
+              data-reveal
             >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 3A2.8 2.8 0 0 0 5 7.8v8.4A2.8 2.8 0 0 0 7.8 19h8.4a2.8 2.8 0 0 0 2.8-2.8V7.8A2.8 2.8 0 0 0 16.2 5H7.8Zm4.2 2.9a4.1 4.1 0 1 1 0 8.2 4.1 4.1 0 0 1 0-8.2Zm0 2.9a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Zm4.6-3.1a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" />
-              </svg>
-              <span>Instagram</span>
+              <span class="tile-icon brand-instagram" aria-hidden="true">
+                <svg viewBox="0 0 48 48" focusable="false">
+                  <defs>
+                    <linearGradient id="instagramGradient" x1="8" y1="42" x2="42" y2="6" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#feda75" />
+                      <stop offset="0.28" stop-color="#fa7e1e" />
+                      <stop offset="0.52" stop-color="#d62976" />
+                      <stop offset="0.75" stop-color="#962fbf" />
+                      <stop offset="1" stop-color="#4f5bd5" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="6" y="6" width="36" height="36" rx="10" fill="url(#instagramGradient)" />
+                  <circle cx="24" cy="24" r="8.3" fill="none" stroke="#fff" stroke-width="3.2" />
+                  <circle cx="34.2" cy="13.8" r="2.7" fill="#fff" />
+                </svg>
+              </span>
+              <strong>Instagram</strong>
+              <small>@mesa_automotiva</small>
             </a>
           </div>
-        </nav>
+        </section>
 
-        <div class="control-card" aria-label="Resumo visual do app">
-          <div class="card-head">
-            <span>CL22</span>
+        <section class="split-section">
+          <div class="section-copy" data-reveal>
+            <p class="eyebrow">Acabamento de app real</p>
+            <h2>Visual de mesa, resposta de painel e presença de palco.</h2>
+            <p>
+              Baixe o app na Play Store e acompanhe a Mesa Automotiva nas
+              redes oficiais.
+            </p>
           </div>
 
-          <div class="screen">
-            <span>MESAS</span>
-            <strong>Som Automotivo</strong>
+          <div class="sound-board" data-reveal>
+            <div class="knob-field" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="board-screen">
+              <span>PLAY STORE</span>
+              <strong>Simulador de Mesa Automotiva</strong>
+              <small>4,7 de nota média</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery-section" id="mesas" aria-labelledby="gallery-title">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Telas reais do aplicativo</p>
+            <h2 id="gallery-title">Mixer, mesa branca e mesa escura.</h2>
           </div>
 
-          <div class="feature-grid">
-            <div>
-              <span class="mini-led"></span>
-              <strong>Grave</strong>
-              <small>Controle dedicado</small>
-            </div>
-            <div>
-              <span class="mini-led blue"></span>
-              <strong>Medio</strong>
-              <small>Ajustes de mesa</small>
-            </div>
-            <div>
-              <span class="mini-led amber"></span>
-              <strong>Canais</strong>
-              <small>Organizado no app</small>
-            </div>
-            <div>
-              <span class="mini-led"></span>
-              <strong>Android</strong>
-              <small>Na Play Store</small>
-            </div>
+          <div class="shot-grid">
+            <figure class="shot shot-wide" data-reveal>
+              <img src="assets/mixer.jpg" alt="Mixer completo do app Mesa CL22" />
+              <figcaption>Mixer completo</figcaption>
+            </figure>
+            <figure class="shot" data-reveal>
+              <img src="assets/white-table.jpg" alt="Mesa branca do app Mesa CL22" />
+              <figcaption>Mesa branca</figcaption>
+            </figure>
+            <figure class="shot" data-reveal>
+              <img src="assets/dark-table.jpg" alt="Mesa escura do app Mesa CL22" />
+              <figcaption>Mesa escura</figcaption>
+            </figure>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+
+        <section class="reviews-section" id="avaliacoes" aria-labelledby="reviews-title">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Na Play Store</p>
+          </div>
+
+          <div class="review-grid">
+            <article class="review-card" data-reveal>
+              <img src="assets/gilberto.jpg" alt="Foto de Gilberto Garcez" />
+              <div>
+                <span class="stars" aria-label="5 estrelas">★★★★★</span>
+                <p>top demais muito realista</p>
+                <strong>Gilberto Garcez</strong>
+              </div>
+            </article>
+            <article class="review-card" data-reveal>
+              <img src="assets/taimar.jpg" alt="Foto de Taimar Jesus" />
+              <div>
+                <span class="stars" aria-label="5 estrelas">★★★★★</span>
+                <p>eu tava esperando esse aplicativo faz tempo muito bom esse aplicativos ta de parabéns</p>
+                <strong>Taimar Jesus</strong>
+              </div>
+            </article>
+            <article class="review-card" data-reveal>
+              <img src="assets/ruan.jpg" alt="Foto de Ruan Firmino" />
+              <div>
+                <span class="stars" aria-label="5 estrelas">★★★★★</span>
+                <p>cara muito top esse aplicativo de mesa de som automotivo tá de parabéns</p>
+                <strong>Ruan Firmino</strong>
+              </div>
+            </article>
+            <article class="review-card" data-reveal>
+              <img src="assets/joabe.jpg" alt="Foto de Joabe Teixeira" />
+              <div>
+                <span class="stars" aria-label="5 estrelas">★★★★★</span>
+                <p>parabéns pelo aplicativo aplicativo excelente de muita qualidade</p>
+                <strong>Joabe Teixeira</strong>
+              </div>
+            </article>
+            <article class="review-card" data-reveal>
+              <img src="assets/leo.jpg" alt="Foto de Léo Nogueira" />
+              <div>
+                <span class="stars" aria-label="5 estrelas">★★★★★</span>
+                <p>muito massa esse app</p>
+                <strong>Léo Nogueira</strong>
+              </div>
+            </article>
+            <article class="review-card" data-reveal>
+              <img src="assets/jonathas.jpg" alt="Foto de Jonathas Samuel" />
+              <div>
+                <span class="stars" aria-label="5 estrelas">★★★★★</span>
+                <p>muito bom</p>
+                <strong>Jonathas Samuel</strong>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <strong>Mesa Automotiva CL22</strong>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
